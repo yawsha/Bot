@@ -1,10 +1,12 @@
 const Discord = require ('discord.js');
-const config = require('config.json')
 
 const client = new Discord.Client();
 
-
 const prefix = '!'
+
+const fs = require('fs');
+
+client.commands = new Discord.Collection();
 
 client.once('ready', () => {
     console.log('Mr.Francis is online!');
@@ -31,4 +33,4 @@ client.on('message', message =>{
 
 
 
-client.login(config.token);
+client.login('ODU0MzU4NjkyMjMzMDg0OTM4.YMixiQ.VimHb25V1t5fA4LEkopqS0wMZZI');
