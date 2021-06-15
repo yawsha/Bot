@@ -1,11 +1,11 @@
 const Discord = require ('discord.js');
+const config = require('./config.json');
+const fs = require('fs');
 
-const config = require('./config.json')
 const client = new Discord.Client();
 
 const prefix = '!'
 
-const fs = require('fs');
 
 client.commands = new Discord.Collection();
 
@@ -15,18 +15,16 @@ client.once('ready', () => {
 
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
-
+    
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
     if(command === 'plsboobs'){
         message.channel.send('Where is your integrity?');
-    
     }
-     if (command === 'hisir'){
-            message.reply('Hello');
-    
-     }
+    if (command === 'hisir'){
+        message.reply('Hello');
+    }
 
 });
 
