@@ -20,8 +20,7 @@ client.on('message', message =>{
     const command = args.shift().toLowerCase();
 
     if(command === 'plsboobs'){
-        const newLocal = 'Where is your integrity?';
-        message.channel.send(newLocal);
+        message.channel.send('Where is your integrity?');
     
     }
      if (command === 'hisir'){
